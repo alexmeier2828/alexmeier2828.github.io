@@ -1,0 +1,24 @@
+h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    text-indent: 3ch;
+}
+p::first-letter {
+    font-style: italic;
+    font-size: large;
+}
+
+a {
+    color: #fcba03;
+    text-decoration: none;
+}
+
+/** Fix for table being larger then the parent container**/
+tr{
+    word-wrap: break-word;
+    word-break: break-all;
+}

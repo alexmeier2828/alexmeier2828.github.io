@@ -1,0 +1,70 @@
+/*
+file: /~ameier/style.css
+Author: Alex Meier
+Email: alex_meier@student.uml.edu
+This webpage was created on 9/10/2020 for 91.61 - GUI Programming I
+UMASS Lowell
+*/
+.main-body {
+  background-color: #0033b3;
+  background-size: 100%;
+}
+
+
+/*Info cards serve as the main container for each section on the page*/
+.info-card {
+  width: auto;
+  height: auto;
+  background-color: #33ffff;
+  border-radius: 5px;
+  border-width: thin;
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 5px 5px 10px 1px black;
+}
+
+/*Flex container to set up 2 columns of info cards for the small sections*/
+.card-block-container {
+  display: flex;
+}
+
+.list {
+  list-style-type: disc;
+}
+
+.profile-pic-container {
+  text-align: center;
+}
+
+/*styling for text and headers*/
+p {
+  margin: 30px;
+  font-size: 15px;
+}
+
+p::first-letter{
+  font-style: italic;
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/*sizing and formating for each individual section*/
+#contact-info{
+  width: 45%;
+}
+#assignments{
+  width: 45%;
+}
+#hobbies {
+  width: 45%;
+}
+#projects {
+  width: 45%;
+}
+
+#temp-assignments-message{
+  font-style: italic;
+}
