@@ -1,0 +1,35 @@
+<!--
+Author: Alex Meier
+Date: October 28th, 2020
+GUI - Homework 5
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HW5</title> 
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!--Form-->
+    <div id="form">
+        <label>Row Start</label>
+        <input type="number" name="Row Start" id="rows" value="1">
+        <label>Row End</label>
+        <input type="number" name="Row End" id="rowe" value="10">
+        <label>Column Start</label>
+        <input type="number" name="Column Start" id="cols" value="1">
+        <label>Column End</label>
+        <input type="number" name="Column End" id="cole" value="10">
+        <button type="submit" id="submit" onclick="makeTable()">Submit</button>
+    </div>
+    <!--Table-->
+    <div id="table">
+      <!--Empty until table is created-->
+    </div>
+
+    <!--Table generator script-->
+    <script src="js/generateTable.js"></script>
+  </body>
+</html>

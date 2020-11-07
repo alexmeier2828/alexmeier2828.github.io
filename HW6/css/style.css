@@ -1,0 +1,61 @@
+/*
+Author: Alex Meier
+Date: October 28th, 2020
+GUI - Homework 5
+*/
+body {
+    background-color: darkgray;
+}
+
+div {
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    min-width: 30px;
+}
+
+
+
+th {
+    border: 1px solid black;
+    border-right: solid white;
+    color: white;
+    background-color: black;
+    min-width: 10px;
+}
+
+#form {
+    float: left;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
+    background-color: lightgray;
+
+}
+
+input {
+    display: list-item;
+}
+
+.error {
+    color: red;
+    font-size: large;
+    text-align: center;
+}
+
+#table {
+    display: inline-block;
+    overflow: scroll;
+    max-height: 500px;
+    max-width: 60%;
+    border: inset;
+    margin: 10px;
+    scrollbar-3dlight-color: blue;
+}
