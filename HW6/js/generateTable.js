@@ -1,33 +1,19 @@
 /*
 Author: Alex Meier
-Date: October 28th, 2020
-GUI - Homework 5
+Email: Alex_meier@student.uml.edu
 */
 function errorMessage(message){
     tableContainer = document.getElementById("table");
     tableContainer.innerHTML = '<p class="error">' + message + '<p>';
 }
 
-function makeTable(){
-    var rowStart = parseInt(document.getElementById("rows").value);
-    var rowEnd = parseInt(document.getElementById("rowe").value);
-    var colStart = parseInt(document.getElementById("cols").value);
-    var colEnd = parseInt(document.getElementById("cole").value);
+function makeTable(form){
+    var rowStart = parseInt(form.elements["rows"].value);
+    var rowEnd = parseInt(form.elements["rowe"].value);
+    var colStart = parseInt(form.elements["cols"].value);
+    var colEnd = parseInt(form.elements["cole"].value);
 
-    //check input
-    if(isNaN(rowStart) || isNaN(rowEnd) || isNaN(colStart) || isNaN(colEnd)){
-        errorMessage("Invalid Input - Value must be numeric");
-        return;
-    }
-    if(rowStart < -50 || rowEnd > 50 || colStart < -50 || colEnd > 50){
-        errorMessage("Input out of range - Values must be between -50 and 50");
-        return;
-    }
-    if(rowEnd < rowStart || colEnd < colStart){
-        errorMessage("Invalid Input - Start value cannot be greater then end value");
-        return;
-    }
-
+    //initialize table
     var table = document.createElement("table");
     var tableBody = document.createElement("tbody");
 
@@ -63,8 +49,16 @@ function makeTable(){
 
     table.appendChild(tableBody);
 
+    //append table to the correct location in the document
     tableDiv = document.getElementById("table");
     tableDiv.innerHTML = "";
     tableDiv.appendChild(table)
 }
-makeTable();
+
+//generate initial table on page load 
+window.onload = function(){
+    makeTable(document.getElementById("table-form"));
+};
+
+
+

@@ -1,7 +1,6 @@
 /*
 Author: Alex Meier
-Date: October 28th, 2020
-GUI - Homework 5
+Email: Alex_meier@student.uml.edu
 */
 body {
     background-color: darkgray;
@@ -29,9 +28,14 @@ th {
     min-width: 10px;
 }
 
-#form {
+
+/*
+Form styling
+*/
+#table-form {
     float: left;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 10px;
     padding: 5px;
     border: solid;
@@ -44,11 +48,18 @@ input {
     display: list-item;
 }
 
+
+/*
+Styling for error messages 
+*/
+
 .error {
     color: red;
-    font-size: large;
-    text-align: center;
+    font-size: small;
+    max-width: inherit;
 }
+
+
 
 #table {
     display: inline-block;
