@@ -1,0 +1,72 @@
+/*
+Author: Alex Meier
+Email: Alex_meier@student.uml.edu
+*/
+body {
+    background-color: darkgray;
+}
+
+div {
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    min-width: 30px;
+}
+
+
+
+th {
+    border: 1px solid black;
+    border-right: solid white;
+    color: white;
+    background-color: black;
+    min-width: 10px;
+}
+
+
+/*
+Form styling
+*/
+#table-form {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    border: solid;
+    border-radius: 5px;
+    background-color: lightgray;
+
+}
+
+input {
+    display: list-item;
+}
+
+
+/*
+Styling for error messages 
+*/
+
+.error {
+    color: red;
+    font-size: small;
+    max-width: inherit;
+}
+
+
+
+#table {
+    display: inline-block;
+    overflow: scroll;
+    max-height: 500px;
+    max-width: 60%;
+    border: inset;
+    margin: 10px;
+    scrollbar-3dlight-color: blue;
+}
