@@ -18,13 +18,17 @@ GUI - Homework 6
     <!--Form-->
     <form id="table-form">
         <label>Row Start</label>
-        <input type="number" name="rows" id="rows" value="1">
+        <div class="formSlider" id="rowStartSlider"></div>
+        <input class="formNumber" type="number" name="rows" id="rows" value="1">
         <label>Row End</label>
-        <input type="number" name="rowe" id="rowe" value="10">
+        <div class="formSlider"  id="rowEndSlider"></div>
+        <input class="formNumber" type="number" name="rowe" id="rowe" value="10">
         <label>Column Start</label>
-        <input type="number" name="cols" id="cols" value="1">
+        <div class="formSlider"  id="colStartSlider"></div>
+        <input class="formNumber" type="number" name="cols" id="cols" value="1">
         <label>Column End</label>
-        <input type="number" name="cole" id="cole" value="10">
+        <div class="formSlider"  id="colEndSlider"></div>
+        <input class="formNumber" type="number" name="cole" id="cole" value="10">
         <input id ="sButton" type="submit"></input>
     </form>
     <!--Table-->
@@ -41,5 +45,6 @@ GUI - Homework 6
     <!--Table generator script-->
     <script src="js/generateTable.js"></script>
     <script src="js/formValidation.js"></script>
+    <script src="js/sliders.js"></script>
   </body>
 </html>
