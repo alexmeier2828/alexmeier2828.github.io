@@ -15,26 +15,39 @@ GUI - Homework 6
     
   </head>
   <body>
-    <!--Form-->
-    <form id="table-form">
-        <label>Row Start</label>
-        <div class="formSlider" id="rowStartSlider"></div>
-        <input class="formNumber" type="number" name="rows" id="rows" value="1">
-        <label>Row End</label>
-        <div class="formSlider"  id="rowEndSlider"></div>
-        <input class="formNumber" type="number" name="rowe" id="rowe" value="10">
-        <label>Column Start</label>
-        <div class="formSlider"  id="colStartSlider"></div>
-        <input class="formNumber" type="number" name="cols" id="cols" value="1">
-        <label>Column End</label>
-        <div class="formSlider"  id="colEndSlider"></div>
-        <input class="formNumber" type="number" name="cole" id="cole" value="10">
-        <input id ="sButton" type="submit"></input>
-    </form>
-    <!--Table-->
-    <div id="table">
-      <!--Empty until table is created-->
+    <!--Tab container-->
+    <div id="tabContainer">
+      <ul>
+        <li><a href="#formTab">Form</a></li>
+        <li><a href="#table1">Table 1</a></li>
+      </ul>
+      <div id="formTab">
+        <!--Form-->
+        <form id="table-form">
+          <label>Row Start</label>
+          <div class="formSlider" id="rowStartSlider"></div>
+          <input class="formNumber" type="number" name="rows" id="rows" value="1">
+          <label>Row End</label>
+          <div class="formSlider"  id="rowEndSlider"></div>
+          <input class="formNumber" type="number" name="rowe" id="rowe" value="10">
+          <label>Column Start</label>
+          <div class="formSlider"  id="colStartSlider"></div>
+          <input class="formNumber" type="number" name="cols" id="cols" value="1">
+          <label>Column End</label>
+          <div class="formSlider"  id="colEndSlider"></div>
+          <input class="formNumber" type="number" name="cole" id="cole" value="10">
+          <input id ="sButton" type="submit"></input>
+        </form>
+      </div>
+      <div id="table1">
+        <!--Table-->
+        <div id="table">
+          <!--Empty until table is created-->
+        </div>
+      </div>
     </div>
+    
+
 
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>   
@@ -46,5 +59,6 @@ GUI - Homework 6
     <script src="js/generateTable.js"></script>
     <script src="js/formValidation.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>

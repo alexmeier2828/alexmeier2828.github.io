@@ -1,0 +1,3 @@
+(function ($){
+    $("#tabContainer").tabs();
+})(jQuery);
