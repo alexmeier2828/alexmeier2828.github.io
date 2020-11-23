@@ -8,6 +8,8 @@ GUI - Homework 6
   <head>
     <meta charset="utf-8">
     <title>HW7</title> 
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!--Jquery UI css-->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <!--Stylesheet-->
@@ -15,15 +17,10 @@ GUI - Homework 6
     
   </head>
   <body>
-    <!--Tab container-->
-    <div id="tabContainer">
-      <ul>
-        <li><a href="#formTab">Form</a></li>
-        <li><a href="#table1">Table 1</a></li>
-      </ul>
-      <div id="formTab">
+    <div class="container">
+      <div class="row">
         <!--Form-->
-        <form id="table-form">
+        <form id="table-form" class="col-3">
           <label>Row Start</label>
           <div class="formSlider" id="rowStartSlider"></div>
           <input class="formNumber" type="number" name="rows" id="rows" value="1">
@@ -36,25 +33,31 @@ GUI - Homework 6
           <label>Column End</label>
           <div class="formSlider"  id="colEndSlider"></div>
           <input class="formNumber" type="number" name="cole" id="cole" value="10">
-          <input id ="sButton" type="submit"></input>
+          <input id="sButton" type="submit"></input>
         </form>
+        <!--Tab container-->
+        <div id="tabContainer" class="col-8">
+          <ul id="tabList">
+          </ul>
+        </div>
       </div>
-      <div id="table1">
-        <!--Table-->
-        <div id="table">
-          <!--Empty until table is created-->
+      <div class="row">
+        <!--Extra controls-->
+        <div class="col-12">
+          <button id="delete-all">Delete All Tabs</button>
         </div>
       </div>
     </div>
-    
-
-
+  
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>   
     <!--JQuery Validate plugin-->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
     <!--JQuery UI Plugin-->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js "></script>
+
+    <!--Bootstrap-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!--Table generator script-->
     <script src="js/generateTable.js"></script>
     <script src="js/formValidation.js"></script>

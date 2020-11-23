@@ -2,6 +2,9 @@
 Author: Alex Meier
 Email: Alex_meier@student.uml.edu
 */
+
+var tabNumber = 1;
+
 function errorMessage(message){
     tableContainer = document.getElementById("table");
     tableContainer.innerHTML = '<p class="error">' + message + '<p>';
@@ -49,10 +52,7 @@ function makeTable(form){
 
     table.appendChild(tableBody);
 
-    //append table to the correct location in the document
-    tableDiv = document.getElementById("table");
-    tableDiv.innerHTML = "";
-    tableDiv.appendChild(table)
+    createNewTableTab(table);
 }
 
 //generate initial table on page load 
@@ -60,5 +60,49 @@ window.onload = function(){
     makeTable(document.getElementById("table-form"));
 };
 
+/**
+ * Create new tab with table
+ * @param {*} table table div
+ */
+function createNewTableTab(table){  
+    var tabList = document.getElementById("tabList");
+    var tabContainer = document.getElementById("tabContainer");
+
+    //create new tab list item
+    li = document.createElement("li");
+    a = document.createElement("a");
+    a.href = "#table" + tabNumber;
+    a.id = "tab-table" + tabNumber;
+    a.innerText = "table" + tabNumber;
+    li.appendChild(a);
+    tabList.appendChild(li);
+    console.log(li);
+
+
+    //add table to tab div
+    var tabBody = document.createElement("div");
+    tabBody.id = "table" + tabNumber;
+    tabBody.classList.add("tabBody");
+    table.classList.add("tableContainer");
+    tabBody.appendChild(table);
+
+    //add delete button
+    var deleteButton = document.createElement("button");
+    deleteButton.id = "delete" + tabNumber;
+    deleteButton.classList.add("delete");
+    deleteButton.innerText = "Delete Tab"
+    tabBody.appendChild(deleteButton);
+    tabContainer.appendChild(tabBody);
+    var tabName = "#table" + tabNumber;
+
+    //itterate tab number
+    tabNumber = tabNumber + 1;
+
+    //update tab
+    $("#tabContainer").tabs("refresh");
+    $("#tabsContainer").tabs("options", "active", $(tabName).index());
+    //$("#tabContainer").tabs("select", - 1);
+
+}
 
 

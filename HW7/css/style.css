@@ -2,6 +2,9 @@
 Author: Alex Meier
 Email: Alex_meier@student.uml.edu
 */
+html,body,.container {
+    height:100%;
+}
 body {
     background-color: darkgray;
 }
@@ -13,12 +16,11 @@ div {
 table {
     border-collapse: collapse;
 }
+
 td {
     border: 1px solid black;
     min-width: 30px;
 }
-
-
 
 th {
     border: 1px solid black;
@@ -28,12 +30,10 @@ th {
     min-width: 10px;
 }
 
-
 /*
 Form styling
 */
 #table-form {
-    float: left;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -48,25 +48,22 @@ input {
     display: list-item;
 }
 
-
 /*
 Styling for error messages 
 */
-
 .error {
     color: red;
     font-size: small;
-    max-width: inherit;
 }
 
-
-
-#table {
+.tableContainer {
     display: inline-block;
     overflow: scroll;
-    max-height: 500px;
-    max-width: 60%;
+    max-width: 100%;
+    max-height: 60%;
     border: inset;
     margin: 10px;
     scrollbar-3dlight-color: blue;
 }
+
+/*tab styling*/
