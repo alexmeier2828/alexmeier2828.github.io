@@ -5,6 +5,9 @@
             var val = ui.value; 
             console.log("SliderMoved:" + $(this).id + " " + val);
             $(this).next().val(val);
+            if($("#liveEdit").is(":checked")) {
+                $("#table-form").submit(); //submit on change
+            }
         },
         value: $(this).next().val(),
         animate: true,
@@ -20,6 +23,9 @@
     //crossbinding for input fields 
     $(".formNumber").change(function (event) {
         $(this).prev().slider('value', event.target.value) //set associated slider value to the value of this input field
+        if($("#liveEdit").is(":checked")) {
+            $("#table-form").submit(); //submit on change
+        }
     });
 
 })(jQuery);

@@ -3,7 +3,6 @@ Author: Alex Meier
 Email: alex_meier@student.uml.edu
 */
 $(document).ready(function() {
- 
     //prevent form submit from refreshing page
     $("form").submit(function(event ){
         event.preventDefault();
@@ -24,7 +23,19 @@ $(document).ready(function() {
     //initialize validation for table-form
     $("#table-form").validate({
         submitHandler: function(form){
-            makeTable(form);
+            var table = makeTable(form);
+            if($("#liveEdit").is(":checked")) {
+                var activeTabID = $("#tabContainer .ui-tabs-panel:visible").attr("id");
+                console.log($("#"+activeTabID).find(".tableContainer"));
+                $("#"+activeTabID).find(".tableContainer").first().remove();
+
+
+                //add table to tab div
+                table.classList.add("tableContainer");
+                $("#" + activeTabID).prepend(table);
+            } else {
+                createNewTableTab(table);
+            }
         },
         rules: {
             rows: {

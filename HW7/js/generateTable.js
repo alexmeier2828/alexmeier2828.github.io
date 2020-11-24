@@ -51,8 +51,7 @@ function makeTable(form){
     }
 
     table.appendChild(tableBody);
-
-    createNewTableTab(table);
+    return table;
 }
 
 //generate initial table on page load 
@@ -103,7 +102,6 @@ function createNewTableTab(table){
     //update tab
     $("#tabContainer").tabs("refresh");
     //$("#tabContainer").tabs("select", - 1);
-
 }
 
 

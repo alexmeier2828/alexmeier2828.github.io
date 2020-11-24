@@ -52,8 +52,7 @@ Checkbox styling
     margin-top: 10px;
 }
 
-.checkboxWithLabel label {
-
+.checkboxWithLabel label{
     display: inline-block;
     padding-right: 10px;
     white-space: nowrap;
@@ -77,7 +76,7 @@ Styling for error messages
     display: inline-block;
     overflow: scroll;
     max-width: 100%;
-    max-height: 60%;
+    max-height: 600px;
     border: inset;
     margin: 10px;
     scrollbar-3dlight-color: blue;
