@@ -44,9 +44,26 @@ Form styling
 
 }
 
-input {
-    display: list-item;
+/*
+Checkbox styling
+*/
+.checkboxWithLabel{
+    background-color: inherit;
+    margin-top: 10px;
 }
+
+.checkboxWithLabel label {
+
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  .checkboxWithLabel input {
+    vertical-align: middle;
+  }
+  .checkboxWithLabel  label span {
+    vertical-align: middle;
+  }
 
 /*
 Styling for error messages 
@@ -66,4 +83,3 @@ Styling for error messages
     scrollbar-3dlight-color: blue;
 }
 
-/*tab styling*/
