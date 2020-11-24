@@ -82,7 +82,7 @@ function createNewTableTab(table){
     //add table to tab div
     var tabBody = document.createElement("div");
     tabBody.id = "table" + tabNumber;
-    tabBody.classList.add("tabBody");
+    tabBody.classList.add("tabBody")
     table.classList.add("tableContainer");
     tabBody.appendChild(table);
 
@@ -97,10 +97,11 @@ function createNewTableTab(table){
 
     //itterate tab number
     tabNumber = tabNumber + 1;
-
+    console.log($(tabName).index());
+    $("#tabContainer").tabs("refresh");
+    $("#tabContainer").tabs("option", "active", $(tabName).index() - 1);
     //update tab
     $("#tabContainer").tabs("refresh");
-    $("#tabsContainer").tabs("options", "active", $(tabName).index());
     //$("#tabContainer").tabs("select", - 1);
 
 }
