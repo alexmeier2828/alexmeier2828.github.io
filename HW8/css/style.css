@@ -1,0 +1,37 @@
+/*Author: Alex Meier
+    Email: alex_meier@student.uml.edu
+    Homework 7
+*/
+#holder {
+    height: 364px;
+    width: 1280px;
+    background-image: url("../graphics_data/scrabble-tile-holder-406774_640.png");
+    background-size: contain;
+    display: flex;
+    flex-direction: row;
+}
+
+#board {
+    height: 180px;
+    width: 2535px;
+    background-image: url("../graphics_data/Scrabble_Board_OneLine.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+}
+
+.board-space {
+    height: 180px;
+    width: 180px;
+}
+
+.tile {
+    height: 150px;
+    width: 150px;
+}
+
+.tile-image {
+    height: inherit;
+    width: inherit;
+}
+
