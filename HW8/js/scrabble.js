@@ -12,7 +12,7 @@
         //fill letterBag
         this.letterBag = [];
         for (const letter in ScrabbleTiles) {
-            if (ScrabbleTiles.hasOwnProperty(letterScrabbleTiles)){       
+            if (ScrabbleTiles.hasOwnProperty(letter)){       
                 const letter_info = ScrabbleTiles[letter];   
                 for (let i = 0; i < letter_info["original-distribution"]; i++) {
                     this.letterBag.push(letter);
@@ -35,7 +35,7 @@
      * Fills tile holder randomly from letterbag up to 7 pieces
      */
     fillTileHolder() {
-        tilesUsed = tiles.length - 7;
+        var tilesUsed = 7 - this.tiles.length;
         for(let i = 0; i < tilesUsed; i++){
             this.tiles.push(this.letterBag.shift()); //pull a piece from the letterBag
         }
@@ -49,7 +49,7 @@
                 .attr({id: "tile" + x})
                 .append($('<img></img>')
                     .addClass("tile-image")
-                    .attr({src: ScrabbleTiles[letter]})));
+                    .attr({src: "graphics_data/Scrabble_Tiles/" + ScrabbleTiles[letter]["image"]})));
         });
     }
  }
