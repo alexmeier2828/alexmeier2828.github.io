@@ -3,8 +3,9 @@
     Homework 7
 */
 #holder {
-    height: 364px;
-    width: 1280px;
+    height: 182px;
+    width: 640px;
+    margin: auto;
     background-image: url("../graphics_data/scrabble-tile-holder-406774_640.png");
     background-size: contain;
     display: flex;
@@ -12,8 +13,9 @@
 }
 
 #board {
-    height: 180px;
-    width: 2535px;
+    height: 90px;
+    width: 1267px;
+    margin:auto;
     background-image: url("../graphics_data/Scrabble_Board_OneLine.png");
     background-size: cover;
     display: flex;
@@ -21,13 +23,13 @@
 }
 
 .board-space {
-    height: 180px;
-    width: 180px;
+    height: 90px;
+    width: 90px;
 }
 
 .tile {
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
 }
 
 .tile-image {
