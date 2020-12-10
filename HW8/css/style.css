@@ -16,6 +16,7 @@
     height: 90px;
     width: 1267px;
     margin:auto;
+    margin-bottom: 50px;
     background-image: url("../graphics_data/Scrabble_Board_OneLine.png");
     background-size: cover;
     display: flex;
@@ -30,6 +31,7 @@
 .tile {
     height: 80px;
     width: 80px;
+    margin:auto;
 }
 
 .tile-image {
@@ -37,3 +39,24 @@
     width: inherit;
 }
 
+/*
+Styling for score board
+*/
+.score_label, #score_board{
+    margin: auto;
+}
+
+.score_element{
+    color: green;
+}
+
+.score-change{
+    color: blue;
+}
+
+/*
+Styling for controls
+*/
+#controls{
+    align-items: center;
+}

@@ -11,23 +11,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!--Score board -->
+    <div id="score_board">
+        <p class="score_label"> Word Score: <span id="word_score" class = "score_element">0</span><span id="word_score_change" class="score-change"></span></p>
+        <p class="score_label">Total Score: <span id="total_score" class = "score_element">0</span></p>
+    </div>
+    <!--game control panel-->
+    <div id="controls">
+        <button id="play_word" >Play Word</button>
+        <button id="restart">Restart</button>
+    </div>
     <!--game board-->
     <div id="board">
-        <div id ="bs1" class="board-space"></div>
-        <div id ="bs2" class="board-space"></div>
-        <div id ="bs3" class="board-space"></div>
-        <div id ="bs4" class="board-space"></div>
-        <div id ="bs5" class="board-space"></div>
-        <div id ="bs6" class="board-space"></div>
-        <div id ="bs7" class="board-space"></div>
-        <div id ="bs8" class="board-space"></div>
-        <div id ="bs9" class="board-space"></div>
-        <div id ="bs10" class="board-space"></div>
-        <div id ="bs11" class="board-space"></div>
-        <div id ="bs12" class="board-space"></div>
-        <div id ="bs13" class="board-space"></div>
-        <div id ="bs14" class="board-space"></div>
-        <div id ="bs15" class="board-space"></div>
+        <div id ="bs1" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs2" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs3" class="board-space" word_bonus="2" letter_bonus="1"></div>
+        <div id ="bs4" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs5" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs6" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs7" class="board-space" word_bonus="1" letter_bonus="2"></div>
+        <div id ="bs8" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs9" class="board-space" word_bonus="1" letter_bonus="2"></div>
+        <div id ="bs10" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs11" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs12" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs13" class="board-space" word_bonus="2" letter_bonus="1"></div>
+        <div id ="bs14" class="board-space" word_bonus="1" letter_bonus="1"></div>
+        <div id ="bs15" class="board-space" word_bonus="1" letter_bonus="1"></div>
     </div>
 
     <!--tile holder-->
@@ -47,4 +57,4 @@
     <script src="js/scrabble.js"></script>
     <script src="js/dragableTiles.js"></script>
 </body>
-</html>
+</html> 
